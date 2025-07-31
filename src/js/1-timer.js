@@ -26,11 +26,8 @@ let result =0;
 const fp = flatpickr(refs.dateTimeElem, options);
 refs.dateTimeElem.addEventListener("input", e=>{
   const time =fp.selectedDates[0].getTime()
-  console.log();
   const timeNow = Date.now();
-  console.log(timeNow);
   result = time - timeNow;
-  console.log(result);
   if (result>0) {
     btnElem.disabled = false;
   }
